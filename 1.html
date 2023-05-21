@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гритчин Георгий Эдуардович. РГЗ по WEB-программированию</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .textonfoto{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            font-family: "Open Sans", sans-serif;
+            overflow-x: hidden;
+            width: auto;
+            text-shadow: 5px 5px 6px rgb(41, 84, 128);
+        }
+        /* Надпись на фотографии делаем по середине */
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        }
+        /* Стиль цифр из раздела истории */
+        .numbers{
+            color: rgb(41, 84, 128);
+            font-size: 80px;
+            margin-left: 30px;
+        }
+        .numbers1{
+            color: rgb(41, 84, 128);
+            font-size: 60px;
+            margin-left: 170px;
+            
+        }
+        /* Стиль заголовка */
+        .zagolovok{
+            font-family: "Open Sans", sans-serif ;
+            color:rgb(16, 45, 73) ;
+            margin-left: 480px;
+        }
+        .zagolovok1{
+            font-family: "Open Sans", sans-serif ;
+            color:rgb(255, 255, 255) ;
+            margin-left: 480px;
+        }
+        /* Стиль полосы  */
+        .polosa{
+            height: 2px;
+            color: rgb(41, 84, 128);
+            background-color: rgb(41, 84, 128);
+        }
+        .historytext{
+            text-align: center;
+            color:rgb(16, 45, 73)  ;
+            font-family: "Open Sans", sans-serif ;
+            border: 1px dashed;
+            border-color: rgb(41, 84, 128);
+            /* border-width: 500px; */
+            
+        }
+        .polotno{
+            background-color:rgb(54, 105, 154)  ;
+        }
+        .blokvidadel{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 10px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+        }
+        .blokvidade2{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 435px;
+            margin-top: -200px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+        }
+        .blokvidade3{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 860px;
+            margin-top: -200px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+        }
+        .blokvidade4{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 10px;
+            margin-top: 20px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+        }
+        .blokvidade5{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 435px;
+            margin-top: -200px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+        }
+        .blokvidade6{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            /* margin: 10px; */
+            margin-left: 860px;
+            margin-top: -200px;
+            box-shadow: 5px 5px 6px rgb(6, 26, 46) ;
+            margin-bottom: 10px;
+        }
+        .textdel{
+            margin: 10px;
+            border: 3px solid;
+            border-color: rgb(41, 84, 128);
+            font-family: "Open Sans", sans-serif ;
+            padding: 10px;
+        }
+        /* Подвал прижатый к низу страницы */
+        footer{
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <!-- Неподвижное меню -->
+            <div class="fixed">
+                <!-- Меню управления -->
+                <div class="main-menu">
+                <a href="1.html" >О компании&nbsp;&nbsp;</a>
+                <a href="2.html" > &nbsp;&nbsp;Основные финансовые показатели&nbsp;&nbsp;</a>
+                <a href="3.html" > &nbsp;&nbsp;Контактные данные&nbsp;&nbsp;</a>
+                <a href="4.html" > &nbsp;&nbsp;Видео&nbsp;&nbsp;</a>
+                </div>   
+                <!-- Ссылка на логтип  -->
+                <div class="logo">
+                    <img src="https://www.samaraenergo.ru/local/templates/main/img/logo.svg" alt="">
+                </div>
+            </div>    
+            
+        </header> 
+
+        <main>
+            <!-- Блок с фотографией и надписью на ней -->
+            <div class="textonfoto">
+                <div>
+                    <img src="https://www.samaraenergo.ru/local/templates/main/img/about/index.svg">
+                </div>
+                <div class="centered"><b>
+                    «Самараэнерго» - крупнейшая энергосбытовая компания Среднего<br>
+                    Поволжья, обеспечивающая поставками около 65%<br>
+                    общегоэлектропотребления Самарской области.<br></b>
+                </div>
+            </div>
+            <!-- Блок с историей развития компании -->
+            <div>
+                <h1><b class="zagolovok">История развития<br></b></h1>
+                <b class="numbers">1932</b><br>
+                <p class="historytext">Приказом по Главному Управлению хозяйства СССР «Главэнерго» №504 от 29 декабря 1932 года<br>
+                     Средне-Волжское районное энергетическое управление было преобразовано в Самарский энергетический комбинат<br>
+                     «Энергокомбинат».</p><br>
+                <hr class="polosa">
+
+                <b class="numbers">1935</b><br>
+                <p class="historytext">
+                    Самарский «Энергокомбинат» переименован в «Куйбышевский энергокомбинат».<br>
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">1941</b><br>
+                <p class="historytext">«Куйбышевский энергокомбинат» реорганизован<br>
+                     в Куйбышевское районное энергетическое управление «Куйбышевэнерго».<br>
+
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">1988</b><br>
+                <p class="historytext">
+                    На базе подведомственных предприятий Куйбышевского районного<br>
+                     энергетического управления «Куйбышевэнерго» было создано Куйбышевское<br>
+                      производственное объединение энергетики и электрификации «Куйбышевэнерго».<br>
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">1991</b><br>
+                <p class="historytext">
+                    Куйбышевское производственное объединение энергетики и электрификации «Куйбышевэнерго»<br>
+                     было переименовано в Самарское производственное объединение энергетики и электрификации «Самараэнерго»<br>
+                      в связи с Указом Президиума Верховного Совета РСФСР от 25 января 1991 года<br>
+                       «О переименовании г. Куйбышева в город Самара и Куйбышевскую область в Самарскую область».<br>
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">1996</b><br>
+                <p class="historytext">Была завершена работа по преобразованию производственного <br>
+                    объединения энергетики и электрификации «Самараэнерго» в акционерное общество «Самараэнерго».<br>
+                     Был утвержден план по приватизации акционерного общества открытого типа «Самараэнерго».<br>
+
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">2003</b><br>
+                <p class="historytext">Акционерное общества открытого типа «Самараэнерго» переименовано в<br>
+                     Открытое акционерное общества энергетики и электрификации «Самараэнерго».<br>
+
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">2005</b><br>
+                <p class="historytext">
+                    Выделение из ОАО «Самараэнерго» структуры системного администратора — Самарского РДУ.<br>
+                </p><br>
+                <hr class="polosa">
+
+                <b class="numbers">2015</b><br>
+                <p class="historytext">
+                    С 17 июня 2015 года ОАО «Самараэнерго» официально переименовано в ПАО «Самараэнерго».<br>
+                     Соответствующая запись внесена в ЕГРЮЛ.<br>
+                </p><br>
+                <hr class="polosa">
+
+                <!-- Блок вида деяятельности  -->
+                <div class="polotno">
+                    <h1><b class="zagolovok1">Виды деятельности<br></b></h1>
+                    <div class="blokvidadel">
+                        <b class="numbers1">01</b><br>
+                        <p class="textdel">Поставка (продажа) электрической энергии 
+                        по установленным тарифам в соответствии с диспетчерскими
+                        графиками электрических нагрузок</p>
+                    </div>
+                    <div class="blokvidade2">
+                        <b class="numbers1">02</b><br>
+                        <p class="textdel">Получение (покупка) электрической 
+                            энергии с оптового рынка
+                             электрической энергии</p>
+                    </div>
+                    <div class="blokvidade3">
+                        <b class="numbers1">03</b><br>
+                        <p class="textdel">Получение (покупка) электроэнергии
+                             от производителей</p>
+                    </div>
+                    <div class="blokvidade4">
+                        <b class="numbers1">04</b><br>
+                        <p class="textdel">Оказание услуг по реализации электроэнергии энергоснабжающим организациям</p>
+                    </div>
+                    <div class="blokvidade5">
+                        <b class="numbers1">05</b><br>
+                        <p class="textdel">Оказание консалтинговых и других услуг, связанных с реализацией энергии юридическим лицам</p>
+                    </div>
+                    <div class="blokvidade6">
+                        <b class="numbers1">06</b><br>
+                        <p class="textdel">Продажа, установка и ремонт электросчетчиков любой классификации</p>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="footerword">
+                &copy;  2023 ПАО «Самараэнерго» Все права защищены и охраняются законом<br>
+                Обязательная к раскрытию информация: Интернет ЗАО «АЭИ «ПРАЙМ»<br>
+                Карта сайта<br>
+            </div>
+            
+        </footer>
+</body>
+</html>
