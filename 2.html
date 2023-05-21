@@ -7,6 +7,7 @@
     <title>Гритчин Георгий Эдуардович. РГЗ по WEB-программированию</title>
     <link rel="stylesheet" href="main.css">
     <style>
+
         /* Стиль заголовка "Основные финансовые показатели" */
         .h1{
             margin: 10px;
@@ -16,15 +17,64 @@
             text-align: center;
             text-decoration: underline overline;
         }
+
+        /* Стиль заголовка "Финансовых показателей" */
+        .h2{
+            margin: 10px;
+            color: rgb(41, 84, 128);
+            font-family: "Open Sans", sans-serif ;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline overline;
+        }
+
         /* Стиль таблицы с данными */
         table{
-            border: 3px solid;
-            border-color: rgb(6, 26, 46);
+            border: 10px solid;
+            border-color: rgb(41, 84, 128);
             margin: 10px;
             padding: 10px;
             text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: "Open Sans", sans-serif ;
+            width: 100%;
+            height: 100%;
+            background-color: #111A39;
         }
-        
+
+        /* Стили строк и ячеек таблицы */
+        th, td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+            border-color: rgb(41, 84, 128);
+        }
+
+        /* Стили финансовых показателей */
+        .finindex{
+            text-align: center;
+            font-family: "Open Sans", sans-serif ;
+            margin: 10px;
+            padding: 10px;
+            color:rgb(41, 84, 128);
+            text-shadow: 5px 5px 6px rgb(41, 84, 128);
+        }
+        /* Стили первой фотографии, в разделе финансовых показателей */
+        .photoone{
+           width: 300px;
+           height: 300px;
+           margin-left: 900px;
+           margin-top: -250px;
+        }
+
+        /* Стили второй фотографии, в разделе финансовых показателей */
+        .phototwo{
+            width: 300px;
+            height: 300px;
+            /* margin-top: -250px; */
+            margin-bottom: -200px;
+            margin-left: -950px;
+        }
     </style>
     <script>
         // Массив даты торгов на Московской бирже
@@ -109,7 +159,7 @@
     <main>
         <!-- Заголовок  -->
         <h1 class="h1">Основные финансовые показатели</h1>
-        
+
          <!-- Таблица цен акций     -->
         <table>
             <!-- Заголовоки таблицы -->
@@ -122,16 +172,19 @@
             <!-- Тело таблицы -->
             <tbody id="sharePrice"></tbody>
         </table>
+
+        <!-- Второй заголовок -->
+        <h2 class="h2">На основании текущих цен, были рассчитаны следующие показатели:</h2>
         
         <!-- Блок с дополнительными данными  -->
-        <div>
+        <div class="finindex">
+            <img class="phototwo" src="https://samaraenergo.ru/local/templates/main/img/ac/block_3.svg">
             <p>Минимальная цена: <span id="minPrice">...</span></p>
             <p>Максимальная цена: <span id="maxPrice">...</span></p>
             <p>Среднеквадратическое отклонение цены: <span id="standardDeviation">...</span></p>
             <p>Капитализация: <span id="capitalization">...</span></p>
+            <img class="photoone" src="https://samaraenergo.ru/local/templates/main/img/ac/block_1.svg">
         </div>
-           
-
     </main>
 
     <footer>
