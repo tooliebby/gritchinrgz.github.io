@@ -1,0 +1,92 @@
+/* Стили шапки */
+header {
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: 1250px;
+    padding: 10px;
+    top: 0px;
+}
+
+/* Стили меню, которое находится в шапке */
+.main-menu{
+    font-size: 15pt;
+    padding-top: 10px; 
+    font-family: "Open Sans", sans-serif;
+    text-align: right;
+    float: right;
+    font-weight: 400;
+}
+
+/* Стили ссылок */
+a{
+    text-decoration: none;
+    color: black;
+    transition-duration: 1s;
+}
+a:link{
+    color: blue;
+}
+
+/* Стили ссылок, которые посетили  */
+a:visited{
+    color: rgb(35, 77, 118);    
+}
+a:focus {
+    border-bottom: 1px solid;
+    background: #1261b1;
+  }
+/* Стили ссылок при наведении на них мыши */
+a:hover{
+    text-shadow: 5px 5px 6px rgb(41, 84, 128) ;
+    transition: 1s;
+}
+
+
+a:active{
+    color: rgb(6, 16, 124);
+    
+}
+
+/* Стили тела, основного блока */
+body{
+    margin: 0px;
+}
+
+/* Стили подвала */
+footer{
+    background-color: rgb(41, 84, 128);
+    height: 100px;
+}
+
+/* Стили слов, которые написаны в подваале */
+.footerword{
+    padding:10px;
+    text-align: center;
+    color: #7A87AD;;
+    bottom: 10px;
+}
+
+/* Стили логотипа компании */
+.logo{
+    height: 30px;
+    width: 30px;
+    padding-top: 0px;
+    float: left;
+}
+
+/* Стили текста, находящегося в main */
+.text{
+    background-color: rgb(177, 39, 39);
+}
+
+/* Стиль неподвижного меню */
+.fixed{
+    position: fixed;
+    height: 60px;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
