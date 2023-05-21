@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гритчин Георгий Эдуардович. РГЗ по WEB-программированию</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+        /* Стиль блока карты */
+        .map{
+            border: 10px solid;
+            border-color: rgb(41, 84, 128);
+            display: block;
+            margin-left: 700px;
+            margin-top: -370px;
+        }
+    
+        /* Стиль блока с первым адресом */
+        .contact{
+            border: 10px solid;
+            border-color: rgb(41, 84, 128);
+            display: block;
+            margin-left: 50px;
+            /* margin-right: -10px; */
+            width:500px ;
+            height: 350px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Стиль блока с вторым адресом */
+        .contact2{
+            width:500px ;
+            height: 350px;  
+            border: 10px solid;
+            border-color: rgb(41, 84, 128);
+            display: block;
+            margin-left: 50px;
+            margin-top: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Стиль блока с третьим адресом  */
+        .contact3{
+            border: 10px solid;
+            border-color: rgb(41, 84, 128);
+            display: block;
+            margin-left: 700px;
+            margin-top: -370px;   
+            width:500px ;
+            height: 350px; 
+            background-color: rgb(255, 255, 255);
+            margin-bottom: 50px;
+        }
+
+        /* Стиль блока мэин */
+        main{
+            background-color:rgb(114, 169, 225) ;
+        }        
+
+        /* Стиль названия цента */
+        .naming{
+            padding: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 19px;
+        }
+
+        /* Стиль названия графика */
+        .garfic{
+            padding: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 14px;
+        }
+
+        /* Стиль адреса */
+        .adress{
+            padding: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 14px;
+            text-decoration:underline;
+        }
+
+        /* Стиль рассписания на неделю */
+        .week{
+            padding: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 14px;
+        }
+
+        /* Стиль маленькой надписи перед номером телефона */
+        .manyphone{
+            padding-left: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 10px;
+            color: darkgray;
+        }
+
+        /* Стиль номера телефона */
+        .numberphone{
+            padding: 10px;
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px;
+        }
+        /* Подвал, который я специально поднял, чтобы убрать маленькое расстояие иежду main и footer  */
+        footer{
+            position: absolute;
+            left: 0;
+            bottom: -372px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Неподвижное меню -->
+        <div class="fixed">
+            <!-- Меню управления -->
+            <div class="main-menu">
+                <a href="1.html" >О компании&nbsp;&nbsp;</a>
+                <a href="2.html" > &nbsp;&nbsp;Основные финансовые показатели&nbsp;&nbsp;</a>
+                <a href="3.html" > &nbsp;&nbsp;Контактные данные&nbsp;&nbsp;</a>
+                <a href="4.html" > &nbsp;&nbsp;Видео&nbsp;&nbsp;</a>
+                </div>    
+            <!-- Ссылка на логтип  -->
+            <div class="logo">
+                <img src="https://www.samaraenergo.ru/local/templates/main/img/logo.svg" alt="">
+            </div>
+        </div>    
+        
+    </header> 
+    <main>
+        <div>
+            <!-- Блок с адресом -->
+            <div class="contact">
+                <b><p class="naming">Самарский центр обслуживания клиентов (прием юридических лиц):</p></b>
+                <b><p class="adress">г. Самара, ул. Ново-Садовая, д. 106, этаж 7А</p></b>
+                <b><p class="garfic"> График приема потребителей</p></b>
+                <p class="week">
+                    Понедельник - Четверг: с 8.00 до 17.00<br>
+                    Пятница: с 8.00 до 16.00<br>
+                    Суббота, воскресенье: выходной<br>
+                </p>
+                <p class="manyphone">Многоканальный справочный телефон:</p>
+                <b><p class="numberphone">8-800-1000-763 (бесплатный)</p></b>
+            </div>
+            <!-- Блок с картой -->
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d96621.60522963796!2d50.14550954910189!3d53.20679482128074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661e9c1ad5f387%3A0x7893744696d3e88c!2z0KHQsNC80LDRgNCw0Y3QvdC10YDQs9C-!5e0!3m2!1sru!2sru!4v1683480013414!5m2!1sru!2sru" width="500" height="350"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Блок с адресом -->
+            <div class="contact2">
+                <b><p class="naming">Региональный центр обслуживания потребителей:</p></b>
+                <b><p class="adress">443068, г. Самара, ул. Ново-Садовая, д. 106, 2 этаж</p></b>
+                <b><p class="garfic"> График приема потребителей</p></b>
+                <p class="week">
+                    Понедельник - Четверг: с 8.00 до 17.00<br>
+                    Пятница: с 8.00 до 16.00<br>
+                    Суббота, воскресенье: выходной<br>
+                </p>
+                <p class="manyphone">Многоканальный справочный телефон:</p>
+                <b><p class="numberphone">8-800-1000-763 (бесплатный)</p></b>
+            </div>
+            <!-- Блок с адресом -->
+            <div class="contact3">
+                <b><p class="naming">Дополнительный пункт приема потребителей:<br>
+                     в г.Самара (Кировский р-н):</p></b>
+                 <b><p class="adress">443035, г. Самара, ул. Ставропольская, 204</p></b>
+                <b><p class="garfic"> График приема потребителей</p></b>
+                <p class="week">
+                    Понедельник - Четверг: с 8.00 до 17.00<br>
+                    Пятница: с 8.00 до 16.00<br>
+                    Суббота, воскресенье: выходной<br>
+                </p>
+                <p class="manyphone">Многоканальный справочный телефон:</p>
+                <b><p class="numberphone">8-800-1000-763 (бесплатный)</p></b>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footerword">
+            &copy;  2023 ПАО «Самараэнерго» Все права защищены и охраняются законом<br>
+            Обязательная к раскрытию информация: Интернет ЗАО «АЭИ «ПРАЙМ»<br>
+            Карта сайта<br>
+        </div> 
+    </footer>
+    
+</body>
+</html>
