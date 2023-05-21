@@ -6,6 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гритчин Георгий Эдуардович. РГЗ по WEB-программированию</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        /* Стиль заголовка "Основные финансовые показатели" */
+        .h1{
+            margin: 10px;
+            color: rgb(41, 84, 128);
+            font-family: "Open Sans", sans-serif ;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline overline;
+        }
+        /* Стиль таблицы с данными */
+        table{
+            border: 3px solid;
+            border-color: rgb(6, 26, 46);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+        // Массив даты торгов на Московской бирже
+         let tradeDates = ['28.04.2023','27.04.2023','26.04.2023','25.04.2023','24.04.2023','21.04.2023','20.04.2023','19.04.2023','18.04.2023','17.04.2023',
+          '14.04.2023','13.04.2023','12.04.2023','11.04.2023','10.04.2023','07.04.2023','06.04.2023','05.04.2023','04.04.2023','03.04.2023'];
+
+        // Цена акций за апрель 2023 компании "Самараэнерго"
+        let aprilPrices = [1.97, 1.51, 1.52, 1.51, 1.51, 1.51, 1.55, 1.55, 1.58, 1.56, 1.51, 1.58, 1.55, 1.54, 1.68, 1.61, 2.26, 2.36, 2.14, 2.41];
+        
+        // Капитализация компании Самараэнерго в млн.руб
+        let capitalization = 9342.77;
+
+        // Расчет статистики цен 
+        let statistics = calculateStatistics(aprilPrices);
+
+        // Функция расчета: максимальной, минимальной и среднеквадратичной цены
+        function calculateStatistics(prices) {
+                // Переменная "Минимальная цена" находит минимальное значение из массива цен акций
+            let minPrice = Math.min(...prices);
+                // Переменная "Максимальная цена" находит максимальное значение из массива цен акций
+            let maxPrice = Math.max(...prices); 
+            let sum = prices.reduce((acc, price) => acc + price, 0);
+            let mean = sum / prices.length;
+            let squaredDifferences = prices.map(price => Math.pow(price - mean, 2));
+            let variance = squaredDifferences.reduce((acc, squaredDiff) => acc + squaredDiff, 0) / prices.length;
+            let standardDeviation = Math.sqrt(variance);
+                
+            //   Оператор return завершает выполнение функции
+            return {
+                minPrice: minPrice,
+                maxPrice: maxPrice,
+                standardDeviation: standardDeviation
+            };
+        }
+
+        // Вывод результатов на страницу, событие window.load используется для старта функии
+          window.onload = function() {                                                            
+            document.getElementById('capitalization').textContent = capitalization;
+            document.getElementById('minPrice').textContent = statistics.minPrice;
+            document.getElementById('maxPrice').textContent = statistics.maxPrice;
+                // Метод toFixed сохраняет определнное количество знаков, поле запятой, чтобы число не было слишком огромным
+            document.getElementById('standardDeviation').textContent = statistics.standardDeviation.toFixed(3);
+                // Переменная "Цена акции" отображает тело таблицы с помощью метода getElementById
+            let priceShare = document.getElementById('sharePrice');
+            for (let i = 0; i < aprilPrices.length; i++) {
+                // Переменная "Ряд", которая создает строку с помощью метода createElement
+                let row = document.createElement('tr');
+                // Переменная "Дата-Коробочки", которая создает строку с помощью метода createElement
+                let dateBox = document.createElement('td');
+                // Переменная "Цена-коробочки", которая создает строку с помощью метода createElement
+                let priceBox = document.createElement('td');
+                // Свойство textContent позволяет считывать текстовое значение элемента, в этой строке считывает дату катировок из массива
+                dateBox.textContent = tradeDates[i];
+                // Свойство textContent позволяет считывать текстовое значение элемента, в этой строке считывает цену катировок из массива
+                priceBox.textContent = aprilPrices[i];
+                row.appendChild(dateBox);
+                row.appendChild(priceBox);
+                priceShare.appendChild(row);
+            }
+        }; 
+    </script>   
 </head>
 <body>
     <header>
@@ -25,8 +105,33 @@
         </div>    
         
     </header> 
+
     <main>
+        <!-- Заголовок  -->
+        <h1 class="h1">Основные финансовые показатели</h1>
         
+         <!-- Таблица цен акций     -->
+        <table>
+            <!-- Заголовоки таблицы -->
+            <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Цена закрытия</th>
+            </tr>
+            </thead>
+            <!-- Тело таблицы -->
+            <tbody id="sharePrice"></tbody>
+        </table>
+        
+        <!-- Блок с дополнительными данными  -->
+        <div>
+            <p>Минимальная цена: <span id="minPrice">...</span></p>
+            <p>Максимальная цена: <span id="maxPrice">...</span></p>
+            <p>Среднеквадратическое отклонение цены: <span id="standardDeviation">...</span></p>
+            <p>Капитализация: <span id="capitalization">...</span></p>
+        </div>
+           
+
     </main>
 
     <footer>
